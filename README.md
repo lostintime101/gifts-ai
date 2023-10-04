@@ -1,29 +1,11 @@
-This is a [RainbowKit](https://rainbowkit.com) + [wagmi](https://wagmi.sh) + [Next.js](https://nextjs.org/) project bootstrapped with [`create-rainbowkit`](https://github.com/rainbow-me/rainbowkit/tree/main/packages/create-rainbowkit).
+# SPACE ID - GIFTS AI
+*Make Gifting the Perfect Digital Identity Easy*
 
-## Getting Started
+![1](https://github.com/lostintime101/gifts-ai/assets/92709487/2324e0dc-b5bf-4081-9106-93db9e04294c)
 
-First, run the development server:
+👉[Slides](https://docs.google.com/presentation/d/15tzXj80vmEVcrGv--3qbmnDhlZiOCo-zwORlhwwgV8k/edit?usp=sharing)👈
 
-```bash
-npm run dev
-```
+This project was created as part of the Decentralized Intelligence Season 1 Hackathon, organized by LearnWeb3.
+It is fully open source and licensed under the MIT license.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about this stack, take a look at the following resources:
-
-- [RainbowKit Documentation](https://rainbowkit.com) - Learn how to customize your wallet connection flow.
-- [wagmi Documentation](https://wagmi.sh) - Learn how to interact with Ethereum.
-- [Next.js Documentation](https://nextjs.org/docs) - Learn how to build a Next.js application.
-
-You can check out [the RainbowKit GitHub repository](https://github.com/rainbow-me/rainbowkit) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The front-end is built with React NextJS and integrates with OpenAI's gpt-3.5-turbo-instruct API endpoint. 
