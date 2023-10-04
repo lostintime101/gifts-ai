@@ -1,6 +1,9 @@
 # SPACE ID - GIFTS AI
 *Make Gifting the Perfect Digital Identity Easy*
+
 ![1](https://github.com/lostintime101/gifts-ai/assets/92709487/2324e0dc-b5bf-4081-9106-93db9e04294c)
+
+👉[Slides](https://docs.google.com/presentation/d/15tzXj80vmEVcrGv--3qbmnDhlZiOCo-zwORlhwwgV8k/edit?usp=sharing)👈
 
 This project was created as part of the Decentralized Intelligence Season 1 Hackathon, organized by LearnWeb3.
 It is fully open source and licensed under the MIT license.
