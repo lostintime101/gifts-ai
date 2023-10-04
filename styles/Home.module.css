@@ -24,7 +24,6 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
 }
@@ -36,7 +35,7 @@
   flex-grow: 1;
 }
 
-.title a {
+.title span {
   color: #1EEFA4;
   text-decoration: none;
 }
@@ -112,7 +111,7 @@
   width: 66%;
   max-width: 600px;
   margin-bottom: 1.5%;
-  box-shadow: 0px 0px 8px #ddd;
+  box-shadow: 0px 0px 8px #000;
   display: flex;
 }
 
@@ -130,7 +129,7 @@
 }
 
 .search-icon {
-  color: #0d76fc;
+  color: #141D1F;
 }
 
 @media (max-width: 600px) {
