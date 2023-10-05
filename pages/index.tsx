@@ -13,7 +13,8 @@ const Home: NextPage = () => {
   const section2 = useRef(null);
   const section3 = useRef(null);
   const [name, setName] = useState<string>('');
-  const [hobbies, setHobbies] = useState<string>('');
+  const [hobbies, setHobbies] = useState('');
+  const [dids, setDids] = useState([])
 
   async function handleName(){
 
@@ -34,7 +35,7 @@ const Home: NextPage = () => {
     if (!inputtedHobbies.current || !inputtedHobbies.current.value || String(inputtedHobbies.current.value) === "") return;
     
     let newHobbies = inputtedHobbies.current.value
-    setName(newHobbies)
+    setHobbies(newHobbies)
     console.log("Hobbies is now: ", newHobbies)
     inputtedHobbies.current.value = "";
 
@@ -43,23 +44,33 @@ const Home: NextPage = () => {
     }
   }
 
-  // function handleInputChange(field, value) {
-  //   if (field === "amount") {
-  //     value = parseFloat(value);
-  //   } 
-  //   else if (field === "time" || field === "recipients") {
-  //     value = parseInt(value);
-  //   }
-  
-  //   const newAirdropValues = { ...airdropValues, [field]: value };
-  //   setAirdropValues(newAirdropValues);
-  //   console.log(`New ${field}: ${newAirdropValues[field]}`);
-  // }
+  async function fetch_names() {
+
+    try {
+      const response = await fetch(`http://127.0.0.1:8000/fetch-dids/${hobbies}`);
+      if (response.status === 404) {
+        console.error('404 error, help');
+        return;
+      }
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data)
+
+      } else {
+        console.error('Error fetching data');
+      }
+    } 
+    catch (error) {
+      console.error('An error occurred:', error);
+    }
+};
+
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>RainbowKit App</title>
+        <title>SPACE ID GIFTS AI</title>
         <meta
           content="SPACE ID GIFTS AI"
           name="make gifting the perfect digital identity easy"
@@ -100,7 +111,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.main} id="section3" ref={section3}>
-          results
+          <button onClick={fetch_names}>Click me</button>
         </div>
 
       </main>
