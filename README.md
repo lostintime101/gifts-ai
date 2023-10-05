@@ -1,7 +1,7 @@
 # SPACE ID - GIFTS AI
 *Make Gifting the Perfect Digital Identity Easy*
 
-![1](https://github.com/lostintime101/gifts-ai/assets/92709487/2324e0dc-b5bf-4081-9106-93db9e04294c)
+![1](https://github.com/lostintime101/gifts-ai/assets/92709487/36bb289e-3c09-4cf3-9b43-01c4a8ecfd92)
 
 👉[Slides](https://docs.google.com/presentation/d/1nmd2yzExhLTbiek4NR0osn4Sd_9X86BcjY_9rVS6tRE/edit?usp=sharing)👈
 
