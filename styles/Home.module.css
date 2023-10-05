@@ -15,8 +15,8 @@
 
 .header {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 3%;
+  right: 3%;
   z-index: 999; /* Ensures wallet stays on top of other content */
 }
 
@@ -130,6 +130,29 @@
 
 .search-icon {
   color: #141D1F;
+}
+
+.confirm {
+  background-color: #1EEFA4;
+  border-radius: 15px;
+  color: black;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.confirm:hover {
+  background-color: #1EEFA4;
+  transform: scale(1.1);
+}
+
+.confirm:active {
+  background-color: #1EEFA4;
+  transform: scale(1.1);
 }
 
 @media (max-width: 600px) {

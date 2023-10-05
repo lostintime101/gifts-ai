@@ -1,9 +1,12 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import type { NextPage } from 'next';
 import { BsFillPeopleFill } from "react-icons/bs";
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+
+import DidList from '../components/DidList'
+
 
 const Home: NextPage = () => {
 
@@ -15,6 +18,7 @@ const Home: NextPage = () => {
   const [name, setName] = useState<string>('');
   const [hobbies, setHobbies] = useState('');
   const [dids, setDids] = useState([])
+
 
   async function handleName(){
 
@@ -39,15 +43,18 @@ const Home: NextPage = () => {
     console.log("Hobbies is now: ", newHobbies)
     inputtedHobbies.current.value = "";
 
-    if (section3.current) {
-      section3.current.scrollIntoView({ behavior: 'smooth' });
-    }
   }
 
   async function fetch_names() {
+    console.log("button clicked, please wait...")
+    
+    if (section3.current) {
+      section3.current.scrollIntoView({ behavior: 'smooth' });
+    }
+    let sentence = `for a person named ${name}, whose hobbies are ${hobbies}`
 
     try {
-      const response = await fetch(`http://127.0.0.1:8000/fetch-dids/${hobbies}`);
+      const response = await fetch(`http://127.0.0.1:8000/fetch-dids/${sentence}`);
       if (response.status === 404) {
         console.error('404 error, help');
         return;
@@ -55,7 +62,10 @@ const Home: NextPage = () => {
 
       if (response.ok) {
         const data = await response.json();
-        console.log(data)
+
+        let newDIDS = data
+        setDids(newDIDS)
+        console.log("DIDS is now: ", newDIDS)
 
       } else {
         console.error('Error fetching data');
@@ -91,7 +101,7 @@ const Home: NextPage = () => {
             <input 
               type="text"
               ref={inputtedName}
-              placeholder="type a name or alias"
+              placeholder="input a name or alias"
               onKeyDown={(e) => { if (e.key === 'Enter') { handleName(); }}}
             />
           </div>
@@ -108,10 +118,11 @@ const Home: NextPage = () => {
               onKeyDown={(e) => { if (e.key === 'Enter') { handleHobbies(); }}}
             />
           </div>
+          <button className={styles.confirm} onClick={fetch_names}>Confirm</button>
         </div>
 
         <div className={styles.main} id="section3" ref={section3}>
-          <button onClick={fetch_names}>Click me</button>
+          < DidList dids={dids}/>
         </div>
 
       </main>
