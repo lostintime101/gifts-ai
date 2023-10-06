@@ -10,3 +10,4 @@ This project was created as part of the Decentralized Intelligence Season 1 Hack
 It is fully open source and licensed under the MIT license.
 
 The front-end is built with React NextJS, the backend is built using FastAPI in Python and integrates with OpenAI's gpt-3.5-turbo-instruct API endpoint. 
+[Backend Repo](https://github.com/lostintime101/gifts-ai-backend)
